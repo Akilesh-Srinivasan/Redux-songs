@@ -29,11 +29,11 @@ class SongList extends React.Component {
         );
     };
 };
-// mapStateToProps = it contains state object that contains all data to show up as props inside our component
+// mapStateToProps = it contains state(reducers) object that contains all data to show up as props inside our component
 //going to be called with state
 // everytime the state is updated , this functon gets called and gives new state
 const mapStateToProps = (state) => {
-    //console.log(state);
+    // console.log(state);
     //this return object contains songs as key with value as state.songs
     //the return object is going to show up as props inside the component
     return { songs: state.songs};
@@ -41,4 +41,5 @@ const mapStateToProps = (state) => {
 // selectsong is imported from actions and passed as an argument to connect function
 // this selectsong will now act as prop and can be passed to the components
 //try console logging props in render method and it will return selectsong function which is an actioncreater
+// connect helps in connecting component and provider
 export default connect(mapStateToProps, { selectSong })(SongList);

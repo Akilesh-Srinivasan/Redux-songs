@@ -7,6 +7,7 @@ import reducers from './reducers';
 
 
 ReactDOM.render(
+    // provider helps in connecting reac and redux
     <Provider store={createStore(reducers)}>
         <App/>
     </Provider>
